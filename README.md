@@ -33,7 +33,6 @@ npm run dev
 
 [http://localhost:5173/](http://localhost:5173/)
 
-Use sample csv file in project folder: <b>mlb_players.csv</b>
 
 ##
 

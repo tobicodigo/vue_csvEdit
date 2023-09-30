@@ -2,13 +2,22 @@
 /* contains download Button
 
 <template>
+   <v-switch
+    v-model="delimiter"
+    hide-details
+    true-value=";"
+    false-value=","
+    :label="`Delimiter: ${delimiter}`"
+    class="delimiter"
+  ></v-switch>
   <base-button @click="prepareDownload" class="download">download</base-button>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { useStore } from 'vuex'
 const store = useStore()
-
+const delimiter = ref(",")
 /* prepare Download after click on download Button */
 
 function prepareDownload() {
@@ -20,7 +29,7 @@ function prepareDownload() {
   store.getters.csvData.forEach((line) => {
     line.forEach((element, index) => {
       if (index !== line.length - 1 && line !== '') {
-        data += element + ';'
+        data += element + delimiter.value
       } else {
         data += element
       }
@@ -49,3 +58,10 @@ function download(data) {
   a.click()
 }
 </script>
+
+
+<style scoped>
+.delimiter{
+  color: black;
+} 
+</style>

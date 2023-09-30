@@ -6,8 +6,7 @@
   <base-error v-if="!isValid">File not valid. Please upload another</base-error>
   <v-switch
     v-model="delimiter"
-    hide-details
-    
+    hide-details   
     true-value=";"
     false-value=","
     :label="`Delimiter: ${delimiter}`"
@@ -125,6 +124,10 @@ img {
   margin-bottom: 0px;
   margin-top: 10px;
   margin-left: 0px;
+}
+
+a {
+  cursor: pointer;
 }
 
 .delimiter{
