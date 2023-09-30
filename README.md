@@ -33,7 +33,6 @@ npm run dev
 
 [http://localhost:5173/](http://localhost:5173/)
 
-
 ##
 
 The following components must be installed before locally:
