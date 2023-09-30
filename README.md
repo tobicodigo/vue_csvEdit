@@ -36,7 +36,7 @@ npm run dev
 
 ##
 
-The following components must be installed locally:
+The following components must be installed before locally:
 <br />
 
 - [nodejs (latest)](https://nodejs.org/)
